@@ -24,4 +24,7 @@
  */
 @interface JSQMessagesCollectionViewCellOutgoing : JSQMessagesCollectionViewCell
 
+@property (weak, nonatomic, readonly) UIButton *resendButton;
+@property (weak, nonatomic, readonly) UIActivityIndicatorView *loadingIndicator;
+
 @end

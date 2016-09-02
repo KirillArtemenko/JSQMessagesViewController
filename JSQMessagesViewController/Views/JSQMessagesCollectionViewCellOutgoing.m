@@ -18,6 +18,13 @@
 
 #import "JSQMessagesCollectionViewCellOutgoing.h"
 
+@interface JSQMessagesCollectionViewCellOutgoing ()
+
+@property (weak, nonatomic) IBOutlet UIButton *resendButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+
+@end
+
 @implementation JSQMessagesCollectionViewCellOutgoing
 
 #pragma mark - Overrides
