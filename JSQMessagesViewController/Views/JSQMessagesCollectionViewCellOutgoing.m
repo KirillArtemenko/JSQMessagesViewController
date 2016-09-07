@@ -34,6 +34,7 @@
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentRight;
     self.cellBottomLabel.textAlignment = NSTextAlignmentRight;
+    [self.resendButton setBackgroundImage:[UIImage imageNamed:@"group4"] forState:UIControlStateNormal];
 }
 
 @end
