@@ -151,6 +151,12 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
     self.toolbarHeightConstraint.constant = self.inputToolbar.preferredDefaultHeight;
 
+    if (@available(iOS 11.0, *)) {
+        [self.inputToolbar.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
+    } else {
+        [self.inputToolbar.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    }
+    
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
 
